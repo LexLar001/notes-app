@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Notes App</h1>
+    <form id="noteForm">
+        <label for="content">Note content:</label><br>
+        <textarea id="content" name="content" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+    <h2>Notes:</h2>
+    <ul id="notes"></ul>
+    <script>
+        document.getElementById('noteForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const content = document.getElementById('content').value;
+            fetch('/notes', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ content: content }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    alert(data.message);
+                    addNoteToList(data.id, data.content);
+                    document.getElementById('content').value = '';
+                } else {
+                    alert(data.error);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+
+        function addNoteToList(id, content) {
+            const notesList = document.getElementById('notes');
+            const li = document.createElement('li');
+            li.id = `note-${id}`;
+            li.innerHTML = `ID: ${id}, Content: ${content} <button onclick="deleteNote(${id})">Delete</button>`;
+            notesList.appendChild(li);
+        }
+
+        function deleteNote(id) {
+            fetch(`/notes/${id}`, {
+                method: 'DELETE',
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    alert(data.message);
+                    const noteElement = document.getElementById(`note-${id}`);
+                    noteElement.remove();
+                } else {
+                    alert(data.error);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        fetch('/notes')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(note => {
+                    addNoteToList(note.id, note.content);
+                });
+            })
+            .catch(error => console.error('Error fetching notes:', error));
+    </script>
+</body>
+</html>

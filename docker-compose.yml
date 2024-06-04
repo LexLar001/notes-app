@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: your_username
+      POSTGRES_PASSWORD: your_password
+      POSTGRES_DB: your_database_name
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    depends_on:
+      - postgres
+    ports:
+      - "5000:5000"
+    environment:
+      FLASK_ENV: development
+      SQLALCHEMY_DATABASE_URI: postgresql://your_username:your_password@postgres:5432/your_database_name
+    volumes:
+      - .:/app
+      - logs-volume:/app/logs
+
+  logger:
+    image: python:3.8-slim
+    volumes:
+      - .:/app
+      - logs-volume:/app/logs
+    command: ["python", "/app/logger.py"]
+
+volumes:
+  postgres_data:
+  logs-volume:

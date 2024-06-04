@@ -1,0 +1,55 @@
+2024-06-03 14:32:58,842 - logger - INFO - Page accessed
+2024-06-03 14:32:58,874 - logger - INFO - Notes fetched successfully
+2024-06-03 14:33:05,743 - logger - INFO - Note created successfully
+2024-06-03 14:46:19,915 - logger - INFO - Page accessed
+2024-06-03 14:46:19,956 - logger - INFO - Notes fetched successfully
+2024-06-03 14:48:42,136 - logger - INFO - Page accessed
+2024-06-03 14:48:42,171 - logger - INFO - Notes fetched successfully
+2024-06-03 14:59:14,797 - logger - INFO - Page accessed
+2024-06-03 14:59:14,834 - logger - INFO - Notes fetched successfully
+2024-06-03 14:59:17,741 - logger - INFO - Note created successfully
+2024-06-03 14:59:25,189 - logger - INFO - Page accessed
+2024-06-03 14:59:25,208 - logger - INFO - Notes fetched successfully
+2024-06-03 15:25:29,149 - logger - INFO - Page accessed
+2024-06-03 15:25:29,185 - logger - INFO - Notes fetched successfully
+2024-06-03 15:28:34,701 - logger - INFO - Page accessed
+2024-06-03 15:28:34,723 - logger - INFO - Notes fetched successfully
+2024-06-03 16:38:04,219 - logger - INFO - Page accessed
+2024-06-03 16:38:04,250 - logger - INFO - Notes fetched successfully
+2024-06-04 00:41:56,688 - logger - INFO - Page accessed
+2024-06-04 00:41:56,767 - logger - INFO - Notes fetched successfully
+2024-06-04 00:42:00,794 - logger - INFO - Note created successfully
+2024-06-04 00:42:04,561 - logger - INFO - Note created successfully
+2024-06-04 00:42:06,536 - logger - ERROR - Content cannot be empty
+2024-06-04 00:43:47,558 - logger - INFO - Page accessed
+2024-06-04 00:43:47,619 - logger - INFO - Notes fetched successfully
+2024-06-04 00:43:51,192 - logger - INFO - Note created successfully
+2024-06-04 00:43:56,075 - logger - INFO - Note created successfully
+2024-06-04 00:48:30,984 - logger - INFO - Page accessed
+2024-06-04 00:48:31,009 - logger - INFO - Notes fetched successfully
+2024-06-04 00:49:26,804 - logger - INFO - Page accessed
+2024-06-04 00:49:26,866 - logger - INFO - Notes fetched successfully
+2024-06-04 00:49:28,389 - logger - INFO - Note 1 deleted successfully
+2024-06-04 00:49:32,161 - logger - INFO - Note 2 deleted successfully
+2024-06-04 00:49:34,861 - logger - INFO - Note created successfully
+2024-06-04 00:49:37,401 - logger - INFO - Page accessed
+2024-06-04 00:49:37,430 - logger - INFO - Notes fetched successfully
+2024-06-04 00:49:42,402 - logger - INFO - Note 3 deleted successfully
+2024-06-04 00:49:44,582 - logger - INFO - Note 4 deleted successfully
+2024-06-04 00:49:46,538 - logger - INFO - Note 5 deleted successfully
+2024-06-04 00:49:48,283 - logger - INFO - Note 6 deleted successfully
+2024-06-04 00:53:18,429 - logger - INFO - Note 7 deleted successfully
+2024-06-04 00:53:20,404 - logger - INFO - Note 8 deleted successfully
+2024-06-04 00:53:22,311 - logger - INFO - Note 9 deleted successfully
+2024-06-04 00:53:24,110 - logger - INFO - Note 10 deleted successfully
+2024-06-04 00:53:26,380 - logger - INFO - Note 11 deleted successfully
+2024-06-04 00:53:28,089 - logger - INFO - Note 12 deleted successfully
+2024-06-04 00:53:29,604 - logger - INFO - Note 13 deleted successfully
+2024-06-04 00:53:31,493 - logger - INFO - Note 14 deleted successfully
+2024-06-04 00:53:33,187 - logger - INFO - Note 15 deleted successfully
+2024-06-04 00:53:34,860 - logger - INFO - Note 16 deleted successfully
+2024-06-04 00:53:36,645 - logger - INFO - Note 17 deleted successfully
+2024-06-04 00:53:38,367 - logger - INFO - Note 18 deleted successfully
+2024-06-04 00:53:41,568 - logger - INFO - Note created successfully
+2024-06-04 00:54:35,819 - logger - INFO - Page accessed
+2024-06-04 00:54:35,858 - logger - INFO - Notes fetched successfully

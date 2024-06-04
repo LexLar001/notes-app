@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multi-service-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: multi-service-app
+  template:
+    metadata:
+      labels:
+        app: multi-service-app
+    spec:
+      containers:
+      - name: app
+        image: lexlar01/app-notes:5.0.0
+        ports:
+        - containerPort: 5000
+        volumeMounts:
+        - mountPath: /app/logs
+          name: logs-volume
+        env:
+        - name: SQLALCHEMY_DATABASE_URI
+          value: 'postgresql://your_username:your_password@postgres-service:5432/your_database_name'
+      volumes:
+      - name: logs-volume
+        emptyDir: {}
